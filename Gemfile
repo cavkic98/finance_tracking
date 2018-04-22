@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -5,22 +6,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-#gem 'rails-controller-testing'
+gem 'will_paginate', '3.1.5'
 
-#gem 'will_paginate', '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
 
-#gem 'bootstrap-will_paginate', '1.0.0'
+gem 'bcrypt', '~> 3.1', '>= 3.1.7'
 
-#gem 'bcrypt', '~> 3.1', '>= 3.1.7'
+gem 'bootstrap-sass', '~> 3.3.7'
 
-#gem 'bootstrap-sass', '~> 3.3.7'
-
-#gem 'jquery-rails'
-
+gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -50,12 +48,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-
   gem 'sqlite3'
-end
-
-group :production  do
-   gem 'pg'
 end
 
 group :development do
@@ -69,3 +62,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :production do 
+  gem 'pg'
+end
